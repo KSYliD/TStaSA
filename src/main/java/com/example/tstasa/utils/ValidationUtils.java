@@ -1,2 +1,4 @@
-package com.example.tstasa.utils;public class ValidationUtils {
+package com.example.tstasa.utils;
+
+public class ValidationUtils {
 }

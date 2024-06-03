@@ -1,2 +1,4 @@
-package com.example.tstasa.entities;public class IncomeReport {
+package com.example.tstasa.entities;
+
+public class IncomeReport {
 }

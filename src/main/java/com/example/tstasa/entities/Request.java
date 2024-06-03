@@ -1,2 +1,4 @@
-package com.example.tstasa.entities;public class Request {
+package com.example.tstasa.entities;
+
+public class Request {
 }

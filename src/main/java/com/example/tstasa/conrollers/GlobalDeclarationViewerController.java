@@ -1,2 +1,4 @@
-package com.example.tstasa.conrollers;public class GlobalDeclarationViewerController {
+package com.example.tstasa.conrollers;
+
+public class GlobalDeclarationViewerController {
 }

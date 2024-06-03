@@ -1,2 +1,4 @@
-package com.example.tstasa.entities;public class ContractOptions {
+package com.example.tstasa.entities;
+
+public class ContractOptions {
 }

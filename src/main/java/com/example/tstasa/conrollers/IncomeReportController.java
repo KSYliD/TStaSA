@@ -1,2 +1,4 @@
-package com.example.tstasa.conrollers;public class IncomeReportController {
+package com.example.tstasa.conrollers;
+
+public class IncomeReportController {
 }

@@ -1,2 +1,4 @@
-package com.example.tstasa.entities;public class ResponseEntity {
+package com.example.tstasa.entities;
+
+public class ResponseEntity {
 }

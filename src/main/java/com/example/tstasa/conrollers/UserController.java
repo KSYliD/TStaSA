@@ -1,2 +1,4 @@
-package com.example.tstasa.conrollers;public class UserController {
+package com.example.tstasa.conrollers;
+
+public class UserController {
 }

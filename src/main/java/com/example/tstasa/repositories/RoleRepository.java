@@ -1,2 +1,7 @@
-package com.example.tstasa.repositories.implementations;public class RoleRepository {
+package com.example.tstasa.repositories;
+
+import com.example.tstasa.entities.user.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RoleRepository extends JpaRepository<Role, Long> {
 }
