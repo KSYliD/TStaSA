@@ -6,14 +6,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findUserById(long id);
     List<User> findAll();
-    User save(User user);
+    @Override
+    <S extends User> S save(S entity);
+
+    Optional<User> findByEmail(String email);
     void deleteById(long id);
-    User findByEmail(String email);
     List<User> findAllByRole(Role role);
     boolean existsByEmail(String email);
 }
