@@ -1,4 +1,4 @@
-package com.example.tstasa.conrollers;
+package com.example.tstasa.controllers;
 
 public class RequestForHelpController {
 }
