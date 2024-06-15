@@ -1,0 +1,50 @@
+package com.example.tstasa.exception;
+
+import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+@ControllerAdvice
+@Log4j2
+public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
+
+    @ExceptionHandler(value
+            = {FailedToAccessException.class})
+    protected ResponseEntity<Object> handleConflictFailedToAccessException(
+            FailedToAccessException ex, WebRequest request) {
+        log.warn(ex.getMessage());
+        return handleExceptionInternal(ex, ex.getMessage(),
+                new HttpHeaders(), ex.getStatus(), request);
+    }
+
+    @ExceptionHandler(value
+            = {NotFoundException.class})
+    protected ResponseEntity<Object> handleConflictNotFoundException(
+            NotFoundException ex, WebRequest request) {
+        log.warn(ex.getMessage());
+        return handleExceptionInternal(ex, ex.getMessage(),
+                new HttpHeaders(), ex.getStatus(), request);
+    }
+
+    @ExceptionHandler(value
+            = {ValidationException.class})
+    protected ResponseEntity<Object> handleConflictValidationException(
+            ValidationException ex, WebRequest request) {
+        log.warn(ex.getMessage());
+        return handleExceptionInternal(ex, ex.getMessage(),
+                new HttpHeaders(), ex.getHttpStatus(), request);
+    }
+
+/*    @ExceptionHandler(value
+            = {Exception.class})
+    protected ResponseEntity<Object> handleConflictException(
+            Exception ex, WebRequest request) {
+        log.error(ex.getMessage());
+        return handleExceptionInternal(ex, ex.getMessage(),
+                new HttpHeaders(), HttpStatusCode.valueOf(404), request);
+    }*/
+}
